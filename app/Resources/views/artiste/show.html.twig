@@ -1,0 +1,74 @@
+{% extends 'layoutP.html.twig' %}
+
+{% block body %}
+    <h1>Artiste  {{ artiste.name }}</h1>
+<div class="conte_show">
+    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+
+        <tbody>
+            <tr>
+              <th>Id</th>
+              <th>Nom</th>
+              <th>Prenom</th>
+              <th>Email</th>
+              <th>Ville</th>
+              <th>Sexe</th>
+              <th>Style</th>
+              <th>Status</th>
+              <th>Telephone</th>
+              <th>Lu</th>
+            </tr>
+            <tr>
+              <td>{{ artiste.id }}</td>
+
+              <td>{{ artiste.name }}</td>
+              <td>{{ artiste.surname }}</td>
+              <td>{{ artiste.email }}</td>
+              <td>{{ artiste.ville }}</td>
+              <td>{{ artiste.sexe }}</td>
+              <td>{{ artiste.style }}</td>
+              <td>{{ artiste.status }}</td>
+              <td>{{ artiste.number }}</td>
+              <td>{{ artiste.lu }}</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <li>
+        {{ form_start(delete_form) }}
+
+          <div class="show_suprimer">
+
+            <input class="mdl-button mdl-js-button mdl-button--raised" type="submit" value="Delete">
+          </div>
+
+        {{ form_end(delete_form) }}
+    </li>
+    <ul>
+      <div class="show_modifier">
+
+      <li>
+
+          <a class="mdl-button mdl-js-button mdl-button--raised" href="{{ path('adminArtiste_edit', { 'id': artiste.id }) }}">Modifier<i class="glyphicon glyphicon-pencil"></i></a>
+      </li>
+    </div>
+  </ul>
+  <ul>
+    <div class="show_retour">
+
+      <li>
+
+          <a class="mdl-button mdl-js-button mdl-button--raised" href="{{ path('adminArtiste_index') }}"><i class="glyphicon glyphicon-chevron-left"></i>Retour á la liste</a>
+      </li>
+
+    </div>
+
+
+
+
+
+    </ul>
+</div>
+
+{% endblock %}

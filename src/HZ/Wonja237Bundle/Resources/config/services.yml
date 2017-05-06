@@ -1,0 +1,11 @@
+services:
+#    hz_wonja237.example:
+#        class: HZ\Wonja237Bundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+
+     hz_wonja237.twig_extension:
+         class: HZ\Wonja237Bundle\Twig\StarRatingExtension
+         arguments: ["@doctrine.orm.entity_manager", "@request_stack"]
+         tags:
+             -  name : twig.extension

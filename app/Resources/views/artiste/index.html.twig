@@ -1,0 +1,70 @@
+{% extends 'layoutP.html.twig' %}
+
+{% block body %}
+
+  <h1>Liste des Artistes</h1>
+
+    <table  class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Profil</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Email</th>
+                <th>Ville</th>
+                <th>Sexe</th>
+                <th>Style</th>
+                <th>Status</th>
+                <th>Telephone</th>
+                <th>Categorie</th>
+
+
+
+                <th>Lu</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for artiste in artistes %}
+            <tr>
+                <td><a href="{{ path('adminArtiste_show', { 'id': artiste.id }) }}">{{ artiste.id }}</a></td>
+                <td><img src="{{ asset(artiste.image.webPath)}}" height="42" width="42" ></td>
+
+                <td>{{ artiste.name }}</td>
+                <td>{{ artiste.surname }}</td>
+                <td>{{ artiste.email }}</td>
+                <td>{{ artiste.ville }}</td>
+                <td>{{ artiste.sexe }}</td>
+                <td>{{ artiste.style }}</td>
+                <td>{{ artiste.status }}</td>
+                <td>{{ artiste.number }}</td>
+                {% for artistes in artiste.categories %}
+                <td>{{ artistes.name}}</td>
+                {% endfor %}
+                <td>{{ artiste.lu }}</td>
+
+
+                <td>
+                    <ul>
+                        <li>
+                            <a class="bon" href="{{ path('adminArtiste_show', { 'id': artiste.id }) }}"><i class="glyphicon glyphicon-info-sign"></i></a>
+                        </li>
+                        <li>
+                            <a href="{{ path('adminArtiste_edit', { 'id': artiste.id }) }}"><i class="glyphicon glyphicon-pencil"></i></a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+      <div class= "cration_artiste">
+            <a class="mdl-button mdl-js-button mdl-button--raised" href="{{ path('adminArtiste_new') }}" ><i class="glyphicon glyphicon-plus"></i>Créer un artiste</a>
+</div>
+        </li>
+    </ul>
+{% endblock %}

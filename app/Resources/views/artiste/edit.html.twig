@@ -1,0 +1,49 @@
+{% extends 'layoutP.html.twig' %}
+
+{% block body %}
+    <h1>Artiste edit</h1>
+    <div class= "cration_artiste">
+      <div class="cration mdl-shadow--2dp">
+        <div class="form_creation">
+    {{ form_start(edit_form) }}
+{{ form_row(edit_form.name, {'attr':{'class':'form-control'}})}}
+{{ form_row(edit_form.surname, {'attr':{'class':'form-control'}})}}
+{{ form_row(edit_form.ville, {'attr':{'class':'form-control'}})}}
+{{ form_row(edit_form.email, {'attr':{'class':'form-control'}})}}
+{{ form_row(edit_form.sexe, {'attr':{'class':'form-control'}})}}
+{{ form_row(edit_form.style, {'attr':{'class':'form-control'}})}}
+{{ form_row(edit_form.status, {'attr':{'class':'form-control'}})}}
+{{ form_row(edit_form.number, {'attr':{'class':'form-control'}})}}
+{{ form_row(edit_form.lu, {'attr':{'class':'form-control'}})}}
+
+     {{ form_widget(edit_form) }}
+       <div class="button_p_edit">
+        <input class="mdl-button mdl-js-button mdl-button--raised" type="submit" value="Modifier" />
+
+    {{ form_end(edit_form) }}
+
+    <ul>
+        <li>
+
+<div class="retour">
+      <a class="mdl-button mdl-js-button mdl-button--raised" href="{{ path('adminArtiste_index') }}"><i class="glyphicon glyphicon-chevron-left"></i>Retour á la liste</a>
+</div>
+        </li>
+        <li>
+
+            {{ form_start(delete_form) }}
+
+            <div class="modifier">
+  <input class="mdl-button mdl-js-button mdl-button--raised" type="submit" value="Suprimer">
+</div>
+
+
+            {{ form_end(delete_form) }}
+        </li>
+
+    </ul>
+  </div>
+  </div>
+</div>
+  </div>
+{% endblock %}

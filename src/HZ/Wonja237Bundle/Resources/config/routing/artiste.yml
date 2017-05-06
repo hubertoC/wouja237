@@ -1,0 +1,24 @@
+adminArtiste_index:
+    path:     /
+    defaults: { _controller: "HZWonja237Bundle:Artiste:index" }
+    methods:  GET
+
+adminArtiste_show:
+    path:     /{id}/show
+    defaults: { _controller: "HZWonja237Bundle:Artiste:show" }
+    methods:  GET
+
+adminArtiste_new:
+    path:     /new
+    defaults: { _controller: "HZWonja237Bundle:Artiste:new" }
+    methods:  [GET, POST]
+
+adminArtiste_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "HZWonja237Bundle:Artiste:edit" }
+    methods:  [GET, POST]
+
+adminArtiste_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "HZWonja237Bundle:Artiste:delete" }
+    methods:  DELETE

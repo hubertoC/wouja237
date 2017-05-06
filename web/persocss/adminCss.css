@@ -1,0 +1,103 @@
+.mdl-data-table{
+  position: relative;
+}
+a.mdl-button{
+  text-decoration: none;
+}
+a.mdl-shadow--2dp{
+  color:red;
+}
+.cration_artiste{
+  padding: 1em;
+  margin-left: -3.5em;
+}
+.colo_menu{
+  color: black;
+}
+.col-md-3{
+  padding-left: 5em;
+  margin-top: 1em;
+}
+li{
+  list-style-type: none;
+
+}
+.navbar{
+  background-color: #F06292;
+}
+.cration_artiste .mdl-button{
+  color: #F06292;
+}
+.demo-card-square.mdl-card {
+  width: 320px;
+  height: 320px;
+}
+.mdl-card__supporting-text{
+  padding: 4em;
+}
+input{
+  border-radius: 0.5em;
+}
+.login_label{
+  color: black;
+}
+input.mdl-button{
+float: left;
+}
+.cration{
+  width: 50em;
+  padding: 0.5em;
+}
+.form_creation{
+  margin: 4px 2px;
+  padding: 2em;
+  margin-bottom: 10px;
+}
+.lon{
+  margin-left:71%;
+}
+
+.button_p_edit{
+
+  margin:1em;
+}
+.retour{
+  margin-left:69%;
+}
+.modifier .mdl-button{
+  position:relative;
+left:33%;
+text-align:center;
+
+}
+
+.conte_show .show_retour .mdl-button {
+float: right;
+margin-bottom:1%;
+}
+.conte_show  .show_suprimer .mdl-button{
+  float: left;
+  margin-right: 2em;
+  margin-top:1%;
+
+}
+.show_modifier{
+  float: left;
+margin-left: 13em;
+margin-top:1%;
+
+}
+
+.show_suprimer .mdl-button{
+  color: #F06292;
+}
+.show_modifier .mdl-button{
+  color: #F06292;
+
+}
+.show_retour .mdl-button{
+  color: #F06292;
+}
+.conte_show{
+  width: 62em;
+}

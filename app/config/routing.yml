@@ -1,0 +1,7 @@
+utilisateurs_utilisateurs:
+    resource: "@UtilisateursUtilisateursBundle/Resources/config/routing.yml"
+    prefix:   /
+
+hz_wonja237:
+    resource: "@HZWonja237Bundle/Resources/config/routing.yml"
+    prefix:   /wonja237

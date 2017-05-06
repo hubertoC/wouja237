@@ -1,0 +1,29 @@
+hz_wonja237_adminArtiste:
+    resource: "@HZWonja237Bundle/Resources/config/routing/artiste.yml"
+    prefix:   /admin
+
+hz_wonja237_public:
+    resource: "@HZWonja237Bundle/Resources/config/routing/publicRouting.yml"
+
+
+hz_wonja237_category:
+        resource: "@HZWonja237Bundle/Resources/config/routing/category.yml"
+        prefix:   admin/category
+
+
+hz_wonja237_publicites:
+        resource: "@HZWonja237Bundle/Resources/config/routing/publicites.yml"
+        prefix:   admin/publicites
+
+
+
+
+
+
+tuto_starratingsystem:
+    path:     /starratingsystem
+    defaults: { _controller: HZWonja237Bundle:Starratingsystem:index }
+
+ajax_star_rating_system:
+  path:  /ajax/starrating/update/data
+  defaults: { _controller: HZWonja237Bundle:AjaxStarratingsystem:updateData }

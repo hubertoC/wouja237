@@ -1,0 +1,282 @@
+.control_text{
+    height: 5px;
+    padding: 22px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 300;
+    color: #202020;
+    border: 1px solid #eee;
+    border-radius: 0;
+    padding-top:1em;
+
+}
+.navbar-default .navbar-nav>li>a{
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+
+}
+.navbar-transparent {
+  background-color: transparent;
+    border-color: rgba(255,255,255,0.4);
+  padding-bottom: 0px;
+}
+.navbar-transparent .navbar-brand{
+  color: rgba(255,255,255,0.8);
+  font-weight: 600;
+}
+
+.navbar-transparent .navbar-nav>li>a{
+  color: rgba(255,255,255,0.8);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+background-color: transparent;
+
+}
+.navbar-transparent .navbar-nav>li>a:hover{
+background-color: transparent;
+color: #E91E63;
+
+}
+
+.rechercheInput{
+  background-color: #ffffff;
+  color: #000;
+  height: 2.5em;
+  width: 20em;
+  border: 15px;
+  border-radius: 0.3em;
+}
+/*finnavbar*/
+
+
+
+figure.effect-sarah figcaption {
+	text-align: left;
+}
+
+figure.effect-sarah h2 {
+	position: relative;
+	overflow: hidden;
+	padding: 0.5em 0;
+}
+
+figure.effect-sarah h2::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: #fff;
+	content: '';
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(-100%,0,0);
+	transform: translate3d(-100%,0,0);
+}
+
+figure.effect-sarah:hover h2::after {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-sarah p {
+	padding: 1em 0;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(100%,0,0);
+	transform: translate3d(100%,0,0);
+}
+
+figure.effect-sarah:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+
+
+
+
+
+
+
+
+
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'feathericons';
+	src:url('../fonts/feathericons/feathericons.eot?-8is7zf');
+	src:url('../fonts/feathericons/feathericons.eot?#iefix-8is7zf') format('embedded-opentype'),
+		url('../fonts/feathericons/feathericons.woff?-8is7zf') format('woff'),
+		url('../fonts/feathericons/feathericons.ttf?-8is7zf') format('truetype'),
+		url('../fonts/feathericons/feathericons.svg?-8is7zf#feathericons') format('svg');
+}
+
+/* Common style */
+.grid figure {
+	position: relative;
+	float: left;
+  display: block;
+  width: 39em;
+  height: 28em;
+	overflow: hidden;
+	margin: 0 auto;
+  padding: 0%;
+  padding-top: 0%;
+  margin-bottom: 0em;
+	text-align: center;
+	cursor: pointer;
+}
+
+
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #000000;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+
+/*---------------*/
+/***** Sarah *****/
+/*---------------*/
+
+figure.effect-sarah {
+}
+
+figure.effect-sarah img {
+  height: 35em;
+  width: 30em;
+  margin: 1em;
+  padding: 1em;
+	max-width: none;
+	width: -webkit-calc(100% + 20px);
+	width: calc(100% + 20px);
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-10px,0,0);
+	transform: translate3d(-10px,0,0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+figure.effect-sarah:hover img {
+	opacity: 0.4;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-sarah figcaption {
+	text-align: left;
+}
+
+figure.effect-sarah h2 {
+	position: relative;
+	overflow: hidden;
+	padding: 0.5em 0;
+}
+
+figure.effect-sarah h2::after {
+	position: absolute;
+
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: #E91E63;
+	content: '';
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(-100%,0,0);
+	transform: translate3d(-100%,0,0);
+}
+
+figure.effect-sarah:hover h2::after {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+
+}
+
+figure.effect-sarah p {
+	padding: 1em 0;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(100%,0,0);
+	transform: translate3d(100%,0,0);
+  color: #E91E63;
+
+
+}
+
+figure.effect-sarah:hover p{
+	opacity: 4;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+input, select, textarea{
+  color: #000000;
+  height: 2.5em;
+}
+
+
+}
+
+
+
+
+/*---------------*/
+/***** publicites*****/
+/*---------------*/

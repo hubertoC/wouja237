@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="{{ _charset }}" />
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+        <title>Une Erreur : {{ status_text }}</title>
+    </head>
+    <body>
+      <div class="jumbotron">
+        <h2>Le Serveur retourne une Erreur :  "{{ status_code }} {{ status_text }}".</h2>
+        <div>
+          Quelque chose est cassé. Faites-nous savoir ce que vous faisiez lorsque cette erreur s'est produite.
+            <br>Nous allons le réparer dès que possible. Désolé pour tout dérangement causé.
+      </div>
+
+        <div class="col-md-8">
+          <br><br>
+          <a href="{{ path('hz_wonja237bundle_contact')}}" class="btn btn-success">Acceuil</a>
+
+          <a href="{{ path('hz_wonja237bundle_contact')}}" class="btn btn-danger">Contact</a>
+
+      </div>
+    </body>
+</html>

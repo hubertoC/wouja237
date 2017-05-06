@@ -1,0 +1,24 @@
+publicites_index:
+    path:     /
+    defaults: { _controller: "HZWonja237Bundle:Publicites:index" }
+    methods:  GET
+
+publicites_show:
+    path:     /{id}/show
+    defaults: { _controller: "HZWonja237Bundle:Publicites:show" }
+    methods:  GET
+
+publicites_new:
+    path:     /new
+    defaults: { _controller: "HZWonja237Bundle:Publicites:new" }
+    methods:  [GET, POST]
+
+publicites_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "HZWonja237Bundle:Publicites:edit" }
+    methods:  [GET, POST]
+
+publicites_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "HZWonja237Bundle:Publicites:delete" }
+    methods:  DELETE

@@ -1,0 +1,219 @@
+
+{% extends "::base.html.twig" %}
+
+
+{% block navbar %}
+
+<nav  class="navbar  navbar-transparent navbar-fixed-top animated fadeIn">
+    <div class="navbar-header">
+      <button id="bs-example-navbar" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="#home">
+           <h3 class="title"> <span class="themecolor"> Wonja </span>237</h3>
+</a>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#home" class="page-scroll">Acceuil</a></li>
+        <li><a href="#one" class="page-scroll">Artistes</a></li>
+        <li><a href="#two" class="page-scroll">Catégories</a></li>
+        <li><a href="#three" class="page-scroll">Partenaire</a></li>
+        <li><a href="#four" class="page-scroll">Newsletter</a></li>
+        <li><a href="{{ path('hz_wonja237bundle_contact')}}" class="page-scroll">Contact</a></li>
+        <li><a href="{{ path('hz_wonja237bundle_enregistrement')}}" >Enregistrement</a></li>
+
+      </ul>
+    </div>
+</nav>
+
+
+
+{% endblock %}
+
+
+{% block mainHeadin %}
+<section class="main-heading" id="home">
+    <div class="overlay">
+        <div class="container">
+            <div class="row">
+                <div class="main-heading-content col-md-12 col-sm-12 text-center">
+
+     <h1 class="main-heading-title">RÉSERVER VOS ARTISTES</h1>
+     <div class="btn-bar">
+       <form class="navbar-form navbar-center">
+        <div class="form-group">
+          <div class="sidebar-search">
+              <div class="input-group custom-search-form">
+                  <input type="text" id="search" class="rechercheInput" placeholder="Nom de ton Artiste ...">
+              </div>
+
+
+              <!-- /input-group -->
+          </div>
+          <ul class="nav" id="side-menu">
+              <li>
+                  <ul class="nav nav-second-leve" id="entitiesNav">
+
+                  </ul>
+              </li>
+          </ul>
+
+          <!-- jQuery is necessary -->
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+          <script type="text/javascript">
+            jQuery(document).ready(function() {
+                var searchRequest = null;
+                $("#search").keyup(function() {
+                    var minlength = 3;
+                    var that = this;
+                    var value = $(this).val();
+                    var entitySelector = $("#entitiesNav").html('');
+                    if (value.length >= minlength ) {
+                        if (searchRequest != null)
+                            searchRequest.abort();
+                        searchRequest = $.ajax({
+                            type: "GET",
+                            url: "{{ path('ajax_search') }}",
+                            data: {
+                                'q' : value
+                            },
+                            dataType: "text",
+                            success: function(msg){
+                                //we need to check if the value is the same
+                                if (value==$(that).val()) {
+                                    var result = JSON.parse(msg);
+                                    $.each(result, function(key, arr) {
+                                        $.each(arr, function(id, value) {
+                                            if (key == 'entities') {
+                                                if (id != 'error') {
+                                                    entitySelector.append('<div style="background-color: #fff;"><li><a href="/wonja237/artisteProfile/'+id+'">'+value+'</a></li></div>');
+                                                } else {
+                                                    entitySelector.append('<li class="errorLi">'+value+'</li>');
+                                                }
+                                            }
+                                        });
+                                    });
+                                }
+                             }
+                        });
+                    }
+                });
+            });
+          </script>
+
+        </div>
+      </form>
+     </div>
+   </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</section>
+{% endblock %}
+
+
+{% block About %}
+
+<section class="portfolio-section" id="one">
+  {% for artiste in artiste | slice(0,6) %}
+  				<div class="grid">
+  					<figure class="effect-sarah">
+  						<img src="{{ asset(artiste.image.webPath)}}"/>
+  						<figcaption>
+  							<h2><span>{{artiste.name}}</span></h2>
+  							<p>Reserver cet Artist maintenant...</p>
+  							<a href="{{ path('hz_wonja237_profile', {'id': artiste.id}) }}">Plus d'infos</a>
+  						</figcaption>
+  					</figure>
+
+  				</div>
+          {% endfor %}
+
+      </section>
+
+{% endblock %}
+
+
+
+
+ {% block Team %}
+ <section class="our-team white-background black"  style="background-color: #212121" id="two">
+       <div class="container" >
+        <div class="row text-center" >
+           <div class="col-md-12" >
+           </br>
+               <h3 class="title">Nos <span class="themecolor"> Catégories</span></h3>
+         {% for category in category %}
+         <div class="mdl-card mdl-shadow--2dp demo-card-square">
+           <div class="mdl-card__title mdl-card--expand">
+             <a href="{{ path('hz_wonja237_categoryArtiste', {'category': category.id, 'name': category.name}) }}">
+
+             <img src="{{ asset(category.webPath)}}">
+             </a>
+           </div>
+           <div class="mdl-card__supporting-text">
+        <h2 >{{ category.name }}</h2>
+       </div>
+         </div>
+         {% endfor %}
+       </div>
+       </div>
+       </div>
+   </section>
+  {% endblock %}
+
+
+
+
+
+
+
+  {% block Temoignes %}
+ <section class="client-testimonial text-center white" id="three">
+
+             <div class="container">
+                 <div class="row">
+                 <div class="col-md-12">
+                   </br>
+                   <h3 class="title">Nos <span class="themecolor"> Partenaires</span></h3>
+
+                     </br>
+           </div>
+{% for publicites in publicites %}
+           <div class="col-sm-4">
+             <a href="#">
+
+               <img src="{{ asset(publicites.webPath)}}" height="42" width="42" >
+
+               <div class="nim-service-detail">
+                 <h4>WebSoft & Co</h4>
+               </a>
+                 <p>Lorem ipsum dolor sit amet ne onsectetuer adipiscing elit. Aenean commodo ligula eget dolor in tashin ty dolor site amet ne onseceruter adipiscing</p>
+
+               </div>
+</br>
+           </div>
+           {% endfor %}
+           </div>
+
+
+
+                 </div>
+             </div>
+
+
+
+  </section>
+  {% endblock %}

@@ -1,0 +1,11 @@
+Liste category
+
+
+{% for category in category %}
+<li>
+
+<a href="{{ path('hz_wonja237_categoryArtiste', {'category': category.id}) }}"> {{category.name}}</a>
+
+
+</li>
+{% endfor %}

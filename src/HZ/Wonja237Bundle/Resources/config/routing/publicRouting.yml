@@ -1,0 +1,41 @@
+hz_wonja237_homepage:
+    path:     /
+    defaults:
+      _controller: HZWonja237Bundle:ArtistePublic:index
+
+hz_wonja237_profile:
+    path:     /artisteProfile/{id}
+    defaults:
+      _controller: HZWonja237Bundle:ArtistePublic:profile
+
+hz_wonja237_category:
+    path:     /category
+    defaults:
+      _controller: HZWonja237Bundle:ArtistePublic:category
+hz_wonja237_categoryArtiste:
+    path:     /categoryArtiste/{category}/{name}
+    defaults:
+      _controller: HZWonja237Bundle:ArtistePublic:categoryArtiste
+
+presentation:
+    path:     /artiste/{id}
+    defaults:
+      _controller: HZWonja237Bundle:ArtistePublic:presentation
+ajax_search:
+    path:     /search
+    defaults:
+      _controller: HZWonja237Bundle:ArtistePublic:search
+      _method: GET
+
+hz_wonja237bundle_reservation:
+    path:     /reservation/{id}/{name}
+    defaults:
+      _controller: HZWonja237Bundle:ArtistePublic:Reservation
+hz_wonja237bundle_enregistrement:
+    path:     /enregistrement/
+    defaults:
+      _controller: HZWonja237Bundle:ArtistePublic:enregistremenArtiste
+hz_wonja237bundle_contact:
+    path:     /contact/
+    defaults:
+      _controller: HZWonja237Bundle:ArtistePublic:contact

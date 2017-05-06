@@ -1,0 +1,44 @@
+{% extends 'layoutPublic.html.twig' %}
+
+
+{% block body %}
+
+<style type="text/css">
+
+.col-md-12 img{
+  float: left;
+  width: 16em;
+  height: 17em;
+  margin: 1em;
+  box-shadow: 0 8px 10px 2px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
+}
+button{
+padding-left: 10em;}
+</style>
+
+
+
+<div class="container" id="cont">
+  <section class="row">
+              <div class="col-md-12" >
+                  <h3 class="title"><span class="themecolor"> Catégorie {{ name }}</span></h3>
+  </section>
+
+  <section class="row">
+    <div class="col-md-12" >
+      {% for artiste in artiste %}
+      <div class="grid">
+        <figure class="effect-sarah">
+          <img src="{{ asset(artiste.image.webPath)}}" alt="img13"/>
+          <figcaption>
+            <h2>{{artiste.surname}} <span>{{artiste.name}}</span></h2>
+            <p>Reservation et Plus d'infos!</p>
+            <a href="{{ path('hz_wonja237_profile', {'id': artiste.id}) }}"></a>
+          </figcaption>
+        </figure>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+      </div>
+{% endblock %}

@@ -1,0 +1,49 @@
+
+
+
+.demo-card-square.mdl-card {
+  width: 320px;
+  height: 270px;
+  float: left;
+  margin: 1.8em;
+  position: relative;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
+
+  cursor:pointer;
+
+}
+
+.demo-card-square.mdl-card:hover {
+  box-shadow: 1px 1px 1px #EEEEEE;
+}
+
+
+.demo-card-square > .mdl-card__title img{
+  width: 320px;
+  height: 200px
+}
+
+
+
+
+.mdl-card__supporting-text{
+  background-color: #E91E63;
+  text-align: center;
+  padding-top: 1em;
+  margin-top: 1em;
+  padding-bottom: 1em;
+}
+.col-md-12 .title {
+  color: #fff;
+}
+
+
+.mdl-card__supporting-text h2{
+  color: #fff;
+  font-family: fantasy;
+}
+
+
+.navbar-toggle{
+  border:5em;
+}
